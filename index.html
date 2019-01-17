@@ -7,8 +7,8 @@
       Case Problem 2
 
       Spice Bowl Payment Form
-      Author: 
-      Date:   
+      Author: Angelina Stilphen
+      Date:   1.16.19
 
       Filename:   sb_payment.html
 
@@ -16,14 +16,22 @@
    
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>Spice Bowl Payment Form</title>
-   <link href="sb_reset.css" rel="stylesheet" />
+   <title>Spice Bowl Payment Form</title> 
+   <link href="sb_reset.css" rel="stylesheet" /> 
    <link href="sb_styles.css" rel="stylesheet" />
+   <link rel="stylesheet" href="sb_forms.css" />
+   <link rel="stylesheet" href="sb_validate.css" /> 
+   <script src="sb_script.js"></script>
 </head>
 
 <body>
    <header>
       <img src="sb_logo.png" alt="The Spice Bowl" />
+
+      <form id="login" action="http://www.example.com/sb/login" method="POST">
+        <input type="text" id="userBox" name="username" placeholder="username" />
+        <input type="text" id="pwdBox" name="password" placeholder="password" />
+    </form> 
 
       <nav> <a id="navicon" href="#"><img src="sb_navicon.png" alt="" /></a>
          <ul>
@@ -38,6 +46,12 @@
    
    <section>
       <h1>Payment Form</h1>
+      <form action="http://www.example.com/sb/payment" method="POST" id="payment" />
+        <fieldset id="billing">
+            <legend>Billing Information (Required)</legend>
+            
+        </fieldset> 
+    </form>
       
       <aside>
          <h1>Menu Ideas</h1>
