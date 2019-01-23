@@ -44,6 +44,8 @@
       </nav>
    </header>
    
+
+   <!-- This form was made so that the action can take place. All the labels and inputs represent the selections in the payment. Then for the state label I made a data list to have the options of all the states. I also added patterns so that the computer knows that the user must type in X amount of numbers or letters. -->
    <section>
       <h1>Payment Form</h1>
       <form action="http://www.example.com/sb/payment" method="POST" id="payment" />
@@ -130,10 +132,71 @@
             <input type="tel" name="phone" id="phoneBox" required  pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />  
         </fieldset> 
 
+        <!-- This fieldset is for the users credit card info where the image of the card that the wesbite takes. I just repeated this  for the rest of the cards that it accepts. -->
         <fieldset id="creditCard">
           <legend>Credit Card (required)"</legend> 
+          <label class="cardLabel" for=""> 
+            <input type="radio" name="cCard" value="amex" required>
+            <img src="sb_amex.png" alt="">
+          </label>
+         
 
+          <label class="cardLabel" for="">
+            <input type="radio" name="cCard" value="discover" required>
+            <img src="sb_discover.png" alt="">
+          </label>
+
+          <label class="cardLabel" for="">
+            <input type="radio" name="cCard" value="master" required>
+            <img src="sb_master.png" alt="">
+          </label>
+
+          <label class="cardLabel" for="">
+            <input type="radio" name="cCard" value="visa" required>
+            <img src="sb_visa.png" alt=""> 
+          </label>
         </fieldset>
+
+        <!-- This next fieldset is the credit card info that has a very long pattern, the pattern helps the user know how many number there should be. -->
+        <fieldset>
+            <label for="cardBox">Credit Card Number</label>
+            <input type="text" name="cardNumber" id="cardBox" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required /> 
+
+            <!-- The expiration date label I used a select element and an option element inside that select with all the months and the months number to let the user have options on when their card expires. -->
+          <label for="monthList">Expiration Date</label>
+          <select name="cardMonth" id="monthList" required>
+            <option value="Month"></option>
+            <option value="01">January (01)</option>
+            <option value="02">February (02)</option>
+            <option value="03">March (03)</option>
+            <option value="04">April (04)</option>
+            <option value="05">May (05)</option>
+            <option value="06">June (06)</option>
+            <option value="07">July (07)</option>
+            <option value="08">August (08)</option>
+            <option value="09">September (09)</option> 
+            <option value="10">October (10)</option>
+            <option value="11">November (11)</option>
+            <option value="12">Decemeber (12)</option>
+          </select>
+
+          <!-- This is the year the user creidit card expires. -->
+          <select name="cardYear" id="yearList" required>
+            <option value="--Year--"></option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+          </select>
+          <label for="cscBox">CSC</label>
+          <input type="text" id="cscBox" required pattern="^\d{3}$" maxlength="3" placeholder="nnn">
+        </fieldset>
+
+        <button type="submit">
+          <img src="sb_button.png" alt="">
+        </button>
+      
 
     </form>
       

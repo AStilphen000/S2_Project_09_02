@@ -4,13 +4,25 @@
    Case Problem 2
 
    Spice Bowl Payment Form Validation Style Sheet
-   Author: 
-   Date:   
+   Author: Angelina Stilphen
+   Date:   1.22.19
 
    Filename: sb_validate.css
 
 */
 
-
+/* All I did for the CSS was changed the background color and told it to go to the input that is not focused and has a radio type. */
 /* Validation Styles */
+input:focus:not([type='radio']) {
+    background-color: rgb(255, 218, 165);
+}
 
+/* This is sayig that it is ging to effect the focused valid in the input as well as not and the type as radio. */
+input:focus:valid:not([type='radio']) {
+    background-color: rgb(215, 255, 215) url(sb_valid.png) right no-repeat;
+}
+
+/* This is sayig that this CSS is going to effect the focused invalid input and not with another type of radio. */
+input:focus:invalid:not([type='radio']) {
+    background-color: rgb(255, 245, 215) url(sb_invalid.png) right no-repeat;
+}
